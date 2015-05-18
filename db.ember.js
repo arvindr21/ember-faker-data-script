@@ -32,7 +32,7 @@ module.exports = function() {
                 data.photos.push({
                     id: pid++,
                     albumId: j,
-                    photos: faker.image.avatar()
+                    photos: faker.image.imageUrl()
                 });
 
             }
@@ -50,7 +50,10 @@ module.exports = function() {
 
         data.users.push({
             id: i,
-            name: faker.name.findName(),
+            firstName: faker.name.firstName(),
+            lastName: faker.name.lastName(),
+            phone : faker.phone.phoneNumber(),
+            avatar: faker.image.avatar(),
             albums: albumIds
         });
 
