@@ -32,7 +32,9 @@ module.exports = function() {
                 data.photos.push({
                     id: pid++,
                     albumId: j,
-                    photos: faker.image.imageUrl()
+                    photos: faker.image.imageUrl(),
+                    tags : faker.lorem.words(),
+                    description: faker.lorem.sentence()
                 });
 
             }
@@ -52,7 +54,8 @@ module.exports = function() {
             id: i,
             firstName: faker.name.firstName(),
             lastName: faker.name.lastName(),
-            phone : faker.phone.phoneNumber(),
+            email: faker.internet.email(),
+            company : faker.company.companyName(),
             avatar: faker.image.avatar(),
             albums: albumIds
         });
