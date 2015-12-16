@@ -31,8 +31,8 @@ module.exports = function() {
 
                 data.photos.push({
                     id: pid++,
-                    albumId: j,
-                    photos: faker.image.imageUrl(),
+                    albumId: aid,
+                    photo: faker.image.imageUrl(),
                     tags : faker.lorem.words(),
                     description: faker.lorem.sentence()
                 });
